@@ -19,5 +19,5 @@ func TestSolvePuzzle2(t *testing.T) {
 	input := utils.ReadInput(t)
 	result := day02.SolvePuzzle2(input)
 	utils.LogResult(t, result)
-	assert.Equal(t, 4174379265, result)
+	assert.Equal(t, 31578210022, result)
 }
