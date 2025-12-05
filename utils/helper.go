@@ -1,6 +1,8 @@
 package utils
 
-import "strings"
+import (
+	"strings"
+)
 
 func GetLineList(input string) []string {
 	lines := strings.Split(strings.TrimSpace(input), "\n")
@@ -13,11 +15,9 @@ func GetLineList(input string) []string {
 }
 
 func GetInputSeparatedByComma(input string) []string {
-	lines := strings.Split(strings.TrimSpace(input), "\n")
-
+	lines := GetLineList(input)
 	commaSeparated := []string{}
 	for _, line := range lines {
-		line = strings.TrimSpace(line)
 		if len(line) == 0 {
 			continue
 		}
@@ -32,4 +32,33 @@ func GetInputSeparatedByComma(input string) []string {
 	}
 
 	return commaSeparated
+}
+
+func ParseArrayStringIntoMatrix(data []string) (result [][]string) {
+
+	for _, val := range data {
+		result = append(result, strings.Split(val, ""))
+	}
+	return result
+}
+
+func GetInputsByBlankSpace(input string) ([]string, []string) {
+	lines := GetLineList(input)
+	part1 := []string{}
+	part2 := []string{}
+	isPart1 := true
+	for _, line := range lines {
+
+		if len(line) == 0 {
+			isPart1 = false
+			continue
+		}
+		if isPart1 {
+			part1 = append(part1, line)
+		} else {
+			part2 = append(part2, line)
+		}
+	}
+
+	return part1, part2
 }
