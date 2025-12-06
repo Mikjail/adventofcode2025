@@ -12,12 +12,12 @@ func TestSolvePuzzle1(t *testing.T) {
 	input := utils.ReadInput(t)
 	result := day05.SolvePuzzle1(input)
 	utils.LogResult(t, result)
-	assert.Equal(t, result, 3)
+	assert.Equal(t, result, 735)
 }
 
 func TestSolvePuzzle2(t *testing.T) {
 	input := utils.ReadInput(t)
 	result := day05.SolvePuzzle2(input)
 	utils.LogResult(t, result)
-	assert.Equal(t, result, 14)
+	assert.Equal(t, result, 344306344403172)
 }

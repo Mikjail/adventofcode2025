@@ -5,11 +5,7 @@ import (
 )
 
 func GetLineList(input string) []string {
-	lines := strings.Split(strings.TrimSpace(input), "\n")
-
-	for _, line := range lines {
-		line = strings.TrimSpace(line)
-	}
+	lines := strings.Split(string(input), "\n")
 
 	return lines
 }
@@ -38,6 +34,15 @@ func ParseArrayStringIntoMatrix(data []string) (result [][]string) {
 
 	for _, val := range data {
 		result = append(result, strings.Split(val, ""))
+	}
+	return result
+}
+
+func SplitLinesWithNumbersIntoMatrix(data []string) (result [][]string) {
+
+	for _, val := range data {
+		val = strings.TrimSpace(val)
+		result = append(result, strings.Fields(val))
 	}
 	return result
 }
