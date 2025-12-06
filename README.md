@@ -1,6 +1,6 @@
 # 🎄 Advent of Go Template 🎄
 
-This repository serves as a template for solving Advent of Code puzzles in Go.
+This repository serves as a template for solving Advent of Code puzzles in Go!
 
 ## How to use
 
